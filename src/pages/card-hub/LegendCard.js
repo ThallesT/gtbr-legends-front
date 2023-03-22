@@ -1,11 +1,14 @@
 import {Card} from "react-bootstrap";
 
-export const LegendCard = () => {
+export const LegendCard = (props) => {
     return (
-        <Card>
-            <Card.Img src={'https://valorantinfo.com/images/br/spray-brimstone-cocorico_valorant_full_icon_37295.webp'}/>
+        <Card className={'text-center'}>
+            <h3>{props.title}</h3>
+            <Card.Img src={props.image}/>
             <Card.Body>
-                <span>olokinho meu</span>
+                <h5>{props.type}</h5>
+                <hr/>
+                <h6>{props.description}</h6>
             </Card.Body>
         </Card>
     )
